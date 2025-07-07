@@ -6,7 +6,6 @@ oh_modules/
 /node_modules/
 /.DS_Store
 # 如果你有自定义打包产物目录，也可以在这里追加
-
 notepad .gitignore
 oh_modules/
 **/oh_modules/
