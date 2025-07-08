@@ -1,7 +1,11 @@
 // ---------- entry/src/main/ets/App.ets ----------
+import TodayPage from './pages/TodayPage';
+import HistoryPage from './pages/HistoryPage';
+import StatsPage from './pages/StatsPage';
+import SettingsPage from './pages/SettingsPage';
 @Entry
 @Component
-struct App {
+export default struct App {
   @State tab: number = 0     // 0:今日 1:历史 2:统计 3:设置
 
   build() {
@@ -48,8 +52,3 @@ struct App {
   }
 }
 
-// 页面导入
-import TodayPage from './pages/TodayPage';
-import HistoryPage from './pages/HistoryPage';
-import StatsPage from './pages/StatsPage';
-import SettingsPage from './pages/SettingsPage';
