@@ -1,5 +1,5 @@
 // entry/src/main/ets/pages/TodayPage.ets
-import { Workout, WorkoutSet } from '../model/Workout';
+import { Workout } from '../model/Workout';
 import { db } from '../model/Database';
 import { RestTimer } from '../utils/Timer';
 
@@ -19,9 +19,9 @@ export default struct TodayPage {
       Text($r('app.string.today'))
         .fontSize(24).margin({ top: 16, bottom: 8 });
 
-      ForEach(this.workouts, (item, index) => {
-        Card(item, index);
-      });
+        ForEach(this.workouts, (item, index) => {
+          this.Card(item, index);
+        });
 
       // 组间倒计时弹窗
       if (this.showTimer) {
@@ -34,6 +34,7 @@ export default struct TodayPage {
   }
 
   // 单个训练卡片
+  @Builder
   private Card(w: Workout, i: number) {
     Column()
       .backgroundColor('#FFFFFF')
